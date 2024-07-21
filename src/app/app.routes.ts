@@ -4,12 +4,14 @@ import { AuthGuard } from 'app/core/auth/guards/auth.guard';
 import { NoAuthGuard } from 'app/core/auth/guards/noAuth.guard';
 import { LayoutComponent } from 'app/layout/layout.component';
 import { HomeComponent } from './modules/landing/home/home.component';
+import { AboutComponent } from './modules/landing/about/about.component';
 
 // @formatter:off
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
-{path:'',component:HomeComponent}
+{path:'',component:HomeComponent},
+{path:'about',component:AboutComponent}
     // // Redirect empty path to '/example'
     // {path: '', pathMatch : 'full', redirectTo: 'example'},
 

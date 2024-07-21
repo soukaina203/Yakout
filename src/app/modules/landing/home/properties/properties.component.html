@@ -1,14 +1,19 @@
-<div class='w-full p-6 bg-[#29405d] text-white '>
+<div class='w-full p-6 bg-[#16005A] text-white flex justify-center items-center '>
     <div class='container grid items-center justify-center w-auto grid-cols-1 p-10 ml-auto mr-auto duration-500 transform place-content-center sm:grid-cols-2 md:p-8 lg:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-4 '>
 
-          <div key={e.id} *ngFor="let e of Props" class='flex h-full max-w-sm gap-2 p-3 pb-2 mx-auto my-auto duration-300 cursor-pointer '>
+        <div
+            key={e.id}
+            *ngFor="let e of Props"
+            class='flex h-full max-w-sm gap-2 p-3 pb-2 mx-auto my-auto duration-300 cursor-pointer '
+        >
 
-            <mat-icon  > {{e.icon}}  </mat-icon>
+        <i [class]="e.icon" style="font-size: 35px;" ></i>
             <div class='flex flex-col  w-[12rem]'>
-              <h1 class='text-3xl font-bold'>{{e.years}}</h1>
-              <h3 class="text-xl">{{e.title}}</h3>
+                <h1 class='font-bold text-7xl'>{{e.years}}</h1>
+                <h3 class="text-[19px] font-semibold ">{{e.title}}</h3>
             </div>
 
-          </div>
+        </div>
     </div>
-  </div>
+</div>
+
