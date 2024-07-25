@@ -1,0 +1,12 @@
+<div class='w-full flex-col p-6 bg-[#16005A] text-white flex justify-center
+items-center'>
+<h1 class="text-4xl font-semibold text-white">Nos chiffres clés
+</h1>
+    <div class='container grid w-auto grid-cols-1 p-10 ml-auto mr-auto duration-500 transform place-items-center sm:grid-cols-2 md:p-8 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-4'>
+      <div *ngFor="let e of Props" class='flex flex-col items-center justify-center h-full max-w-sm p-3 pb-2 mx-auto my-auto duration-300 cursor-pointer'>
+        <i [class]="e.icon" style="font-size: 55px; margin-bottom: 18px;"></i>
+          <h1 class='text-4xl font-bold'>{{e.years}}</h1>
+          <h3 class='text-[15px] font-semibold text-center'>{{e.title}}</h3>
+      </div>
+    </div>
+  </div>

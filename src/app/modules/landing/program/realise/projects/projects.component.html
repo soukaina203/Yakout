@@ -1,0 +1,17 @@
+<div class="w-full pb-6 mt-5 p-7">
+    <h1 class="text-center font-bold text-2xl lg:text-[2.5rem] mb-3 text-[#003D8A]">
+        Construire Aujourd'hui, Anticiper Demain
+    </h1>
+    <div class="flex items-center justify-center">
+    <div class="container grid justify-center w-auto grid-cols-1 p-10 mx-auto duration-500 transform place-items-center md:grid-cols-2 md:p-8 lg:grid-cols-3 2xl:grid-cols-3 gap-x-6 gap-y-6">
+        <div *ngFor="let e of services" class="min-h-[460px] relative bg-cover bg-no-repeat md:w-full h-full col-span-1 lg:w-[25rem]" [ngStyle]="{'background-image': 'url(/assets/images/projects/' + e.image + '.jpg)'}">
+            <div class="h-full max-w-xl p-10 pb-6 mx-auto my-auto duration-300 transform shadow-md cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="bg-white p-7">
+                    <h1 class="mb-2 text-2xl font-bold text-left">{{ e.title }}</h1>
+                    <p class="text-[17px]">{{ e.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

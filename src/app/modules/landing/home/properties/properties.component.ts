@@ -12,9 +12,9 @@ import { MatModule } from 'app/mat.module';
 export class PropertiesComponent {
      Props = [
         { title: "d'experience reconue", years: "10 ans",
-         icon: 'fa-regular fa-star-shooting'},
-        { title: "Cabinets d'excellence", years: "+7 ", icon:'fa-regular fa-star-shooting'},
-        { title: "expertises pour vous accoumpagner", years: "10", icon: 'fa-regular fa-star-shooting'},
-        { title: "collaboration a votre service ", years: "+20", icon:'fa-regular fa-star-shooting'  },
+         icon: 'fa-solid fa-award'},
+        { title: "Cabinets d'excellence", years: "+7 ", icon:'fa-solid fa-location-dot'},
+        { title: "expertises pour vous accoumpagner", years: "10", icon: 'fa-solid fa-handshake'},
+        { title: "collaboration a votre service ", years: "+20", icon:'fa-solid fa-users'  },
       ]
 }

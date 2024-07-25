@@ -1,0 +1,39 @@
+<!-- <div class="">
+    <div class="mx-auto mb-10 text-center md:mb-12">
+        <h2 class="max-w-3xl font-sans text-3xl font-bold leading-none tracking-tight text-[#376F00] lg:text-6xl mx-auto">
+            Les membres du comité de direction du fonds de dotation
+        </h2>
+    </div>
+
+    <div class="relative flex items-center justify-center w-full p-20 overflow-hidden text-black h-fit lg:pb-16">
+        <div class="flex gap-8 mb-8 transition-transform duration-500 ease-in-out" [ngClass]="{'w-[300%]': isLargeScreen, 'w-full': !isLargeScreen}"
+            [ngStyle]="{'transform': 'translateX(-' + currentIndex * (isLargeScreen ? 33.3333 : 100) + '%)'}">
+
+            <div *ngFor="let e of slides; let index = index" [ngClass]="{'w-[30rem] h-fit': isLargeScreen, 'w-full': !isLargeScreen}"
+                class="flex flex-col items-center flex-shrink-0 bg-black/85 shadow-lg rounded-tl-[206.22px] rounded-br-[206px]">
+
+                <img [src]="'assets/images/avatars/' + e.image" class="w-32 h-32 mt-auto mb-auto rounded-full">
+
+                <div class="mt-4 text-center">
+                    <h2 class="w-full mb-2 text-lg font-semibold text-black lg:max-w-[19rem] md:w-[17rem] font-Yantramanav-Black">{{e.name}}</h2>
+                    <h2 class="w-full mb-2 text-lg font-semibold text-black lg:max-w-[19rem] md:w-[17rem] font-Yantramanav-Black">{{e.post}}</h2>
+                    <p class="mb-4 font-semibold text-[#376F00]">{{e.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="absolute p-2 bg-white text-black transform -translate-y-1/2 top-1/2 left-2 rounded-md hover:text-white hover:bg-[#D0A614]"
+            (click)="handlePrev()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <button class="absolute p-2 bg-white text-black transform -translate-y-1/2 top-1/2 right-2 rounded-md hover:text-white hover:bg-[#D0A614]"
+            (click)="handleNext()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+</div> -->
