@@ -6,16 +6,16 @@
         </h1>
         <!-- Main Menu for Large Screens -->
         <ul class="items-center hidden pr-10 text-lg font-medium cursor-pointer lg:flex">
-          <li class="px-6 py-4 duration-500 underlineHover hover:pointer-auto">
-            <a routerLink="">Acceuil</a>
+          <li class="px-6 py-4 duration-500 underlineHover hover:text-[#B70035] hover:pointer-auto">
+            <a routerLink="/">Acceuil</a>
           </li>
-          <li class="px-6 py-4 duration-500 underlineHover hover:pointer-auto">
-            <a routerLink="about" routerLinkActive="router-link-active">A propos</a>
+          <li class="px-6 py-4 duration-500 underlineHover hover:pointer-auto hover:text-[#B70035]">
+            <a routerLink="/about" routerLinkActive="router-link-active">A propos</a>
           </li>
-          <li class="relative px-6 py-4 duration-500 group underlineHover">
+          <li class="relative px-6 py-4 duration-500 group underlineHover hover:text-[#B70035]">
             <a>Program</a>
             <!-- Dropdown Menu -->
-            <ul class="absolute left-0 hidden w-[15rem]  h-[7rem] mt-2 bg-[#16005A] text-white border rounded shadow-lg group-hover:block">
+            <ul class="absolute left-0 hidden w-[15rem] z-40 h-[7rem] mt-2 bg-[#16005A] text-white  rounded shadow-lg group-hover:block">
               <li class="px-4 py-2 mt-[1rem]">
                 <a routerLink="/encours">Program en cours</a>
               </li>
@@ -24,18 +24,28 @@
               </li>
             </ul>
           </li>
-          <li class="px-6 py-4 duration-500 underlineHover">
+          <li class="px-6 py-4 duration-500 underlineHover hover:text-[#B70035]">
             <a routerLink="/actualite">Actualite</a>
           </li>
-          <li class="px-6 py-4 duration-500 underlineHover">
-            <a>Annonces</a>
+          <li class="px-6 py-4 duration-500 underlineHover hover:text-[#B70035]">
+            <a routerLink="/annonces">Annonces</a>
           </li>
-          <li class="px-6 py-4 duration-500 underlineHover">
+
+
+          <li class="relative px-6 py-4 duration-500 group underlineHover hover:text-[#B70035]">
             <a>Partenariats</a>
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 hidden w-[15rem] z-40 h-[7rem] mt-2 bg-[#16005A] text-white  rounded shadow-lg group-hover:block">
+              <li class="px-4 py-2 mt-[1rem]">
+                <a routerLink="/partenaires">Nos Partenaires</a>
+              </li>
+              <li class="px-4 py-2">
+                <a routerLink="/partenaires">Nouveau Partenaires</a>
+              </li>
+            </ul>
           </li>
         </ul>
 
-        <button class="hidden lg:block">Contact Us</button>
 
         <!-- Mobile Menu Button -->
         <button class="lg:hidden group">
@@ -50,16 +60,16 @@
                 <a>A propos</a>
               </li>
               <li class="px-6 py-4 duration-500 underlineHover">
-                <a>Program</a>
+                <a routerLink="/encours">Program</a>
               </li>
               <li class="px-6 py-4 duration-500 underlineHover">
-                <a>Actualite</a>
+                <a routerLink="/actualite">Actualite</a>
               </li>
               <li class="px-6 py-4 duration-500 underlineHover">
-                <a>Annonces</a>
+                <a routerLink="/annonces">Annonces</a>
               </li>
               <li class="px-6 py-4 duration-500 underlineHover">
-                <a>Partenariats</a>
+                <a routerLink="/partenaires">Partenariats</a>
               </li>
             </ul>
           </div>

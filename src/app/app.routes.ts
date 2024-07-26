@@ -7,6 +7,8 @@ import { HomeComponent } from './modules/landing/home/home.component';
 import { AboutComponent } from './modules/landing/about/about.component';
 import { RealiseComponent } from './modules/landing/program/realise/realise.component';
 import { ActualiteComponent } from './modules/landing/actualite/actualite.component';
+import { AnnoncesComponent } from './modules/landing/annonces/annonces.component';
+import { PartenaireComponent } from './modules/landing/partenaire/partenaire.component';
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -17,6 +19,8 @@ export const appRoutes: Route[] = [
 {path:'realise',component:RealiseComponent},
 {path:'encours',component:RealiseComponent},
 {path:'actualite',component:ActualiteComponent},
+{path:'annonces',component:AnnoncesComponent},
+{path:'partenaires',component:PartenaireComponent},
 
 
     // // Redirect empty path to '/example'
