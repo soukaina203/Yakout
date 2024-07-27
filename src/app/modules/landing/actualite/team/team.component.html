@@ -1,39 +1,100 @@
-<!-- <div class="">
-    <div class="mx-auto mb-10 text-center md:mb-12">
-        <h2 class="max-w-3xl font-sans text-3xl font-bold leading-none tracking-tight text-[#376F00] lg:text-6xl mx-auto">
-            Les membres du comité de direction du fonds de dotation
-        </h2>
-    </div>
-
-    <div class="relative flex items-center justify-center w-full p-20 overflow-hidden text-black h-fit lg:pb-16">
-        <div class="flex gap-8 mb-8 transition-transform duration-500 ease-in-out" [ngClass]="{'w-[300%]': isLargeScreen, 'w-full': !isLargeScreen}"
-            [ngStyle]="{'transform': 'translateX(-' + currentIndex * (isLargeScreen ? 33.3333 : 100) + '%)'}">
-
-            <div *ngFor="let e of slides; let index = index" [ngClass]="{'w-[30rem] h-fit': isLargeScreen, 'w-full': !isLargeScreen}"
-                class="flex flex-col items-center flex-shrink-0 bg-black/85 shadow-lg rounded-tl-[206.22px] rounded-br-[206px]">
-
-                <img [src]="'assets/images/avatars/' + e.image" class="w-32 h-32 mt-auto mb-auto rounded-full">
-
-                <div class="mt-4 text-center">
-                    <h2 class="w-full mb-2 text-lg font-semibold text-black lg:max-w-[19rem] md:w-[17rem] font-Yantramanav-Black">{{e.name}}</h2>
-                    <h2 class="w-full mb-2 text-lg font-semibold text-black lg:max-w-[19rem] md:w-[17rem] font-Yantramanav-Black">{{e.post}}</h2>
-                    <p class="mb-4 font-semibold text-[#376F00]">{{e.description}}</p>
-                </div>
+<!-- <div class="container px-4 mx-auto">
+    <h2 class="mb-6 text-2xl font-bold text-center">Les membres du comité de direction du fonds de dotation</h2>
+    <div class="relative flex items-center justify-center w-full overflow-hidden">
+      <button class="absolute left-0 p-2 text-xl text-gray-600 bg-white rounded-full shadow hover:bg-gray-200" (click)="previous()">
+        &#9664;
+      </button>
+      <div #slider class="flex transition-transform duration-500 ease-in-out" [ngClass]="{'w-[400%]': isLargeScreen, 'w-full': !isLargeScreen}" [ngStyle]="{'transform': 'translateX(-' + currentIndex * (isLargeScreen ? 25 : 100) + '%)'}">
+        <div *ngFor="let member of members" [ngClass]="{'w-1/4': isLargeScreen, 'w-full': !isLargeScreen}" class="flex-shrink-0 p-4">
+          <div class="overflow-hidden bg-white rounded-lg shadow-lg">
+            <img [src]="member.image" alt="{{member.name}}" class="object-cover w-full h-64">
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">{{member.name}}</h3>
+              <p class="text-gray-600">{{member.position}}</p>
+              <p class="text-gray-600">{{member.description}}</p>
+              <a href="{{member.linkedin}}" target="_blank" class="inline-block mt-2 text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.593 18h-2.814v-8h2.814v8zm-1.407-9.189c-.97 0-1.758-.788-1.758-1.758 0-.97.788-1.758 1.758-1.758s1.758.788 1.758 1.758c0 .97-.788 1.758-1.758 1.758zm13.457 9.189h-2.814v-4.057c0-.968-.019-2.214-1.351-2.214-1.354 0-1.561 1.058-1.561 2.145v4.126h-2.814v-8h2.701v1.091h.038c.376-.712 1.293-1.458 2.661-1.458 2.847 0 3.372 1.874 3.372 4.314v4.053h-.001z"/></svg>
+              </a>
             </div>
+          </div>
         </div>
-
-        <button class="absolute p-2 bg-white text-black transform -translate-y-1/2 top-1/2 left-2 rounded-md hover:text-white hover:bg-[#D0A614]"
-            (click)="handlePrev()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-
-        <button class="absolute p-2 bg-white text-black transform -translate-y-1/2 top-1/2 right-2 rounded-md hover:text-white hover:bg-[#D0A614]"
-            (click)="handleNext()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-        </button>
+      </div>
+      <button class="absolute right-0 p-2 text-xl text-gray-600 bg-white rounded-full shadow hover:bg-gray-200" (click)="next()">
+        &#9654;
+      </button>
     </div>
-</div> -->
+  </div> -->
+
+  <div class="p-[9rem] bg-slate-400 flex justify-center items-center flex-col ">
+    <div class="mb-10 bg-red-300 md:mx-auto sm:text-center md:mb-12">
+      <h2 class="max-w-3xl font-sans text-center mb-2 text-3xl md:text-[2.6rem] font-bold leading-none tracking-tight text-[#376F00] lg:text-6xl md:mx-auto">
+        What People Say About Our Recipes
+      </h2>
+      <p class="text-center hidden md:block max-w-lg text-[#9E7B5D] lg:max-w-xl mr-auto ml-auto font-medium text-xl">
+        From comfort food classics to exotic flavors, our featured recipes are sure to impress
+      </p>
+    </div>
+    <div class="relative flex items-center justify-center w-fit p-20 bg-yellow-100 h-fit  lg:pb-[4rem]">
+      <div
+        [ngClass]="{'w-[300%]': isLargeScreen, 'w-fit': !isLargeScreen}"
+        [ngStyle]="{'transform': 'translateX(-' + currentIndex * (isLargeScreen ? 33.3333 : 100) + '%)'}"
+        class="flex transition-transform duration-500 ease-in-out gap-[2rem]"
+      >
+        <div
+          *ngFor="let comment of slides; let index = index"
+          [ngClass]="{'w-[30rem] h-fit': isLargeScreen, 'w-full': !isLargeScreen}"
+          class="flex flex-col items-center flex-shrink-0 p-6 bg-black/85 rounded-tl-[206.22px] rounded-br-[206px] shadow-lg"
+        >
+          <img
+            [src]="comment.image"
+            class="w-32 h-32 mt-auto mb-auto rounded-full"
+          >
+          <div class="mt-4 text-center">
+            <h2 class="lg:max-w-[19rem] md:w-[17rem] w-full mb-2 font-semibold text-black text-lg font-Yantramanav-Black">
+              {{comment.content}}
+            </h2>
+            <p class="mb-4 font-semibold text-[#376F00]">{{comment.name}}</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="absolute p-2 text-black transform -translate-y-1/2 top-1/2 left-2 bg-white rounded-md hover:text-white hover:bg-[#D0A614]"
+        (click)="handlePrev()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
+      </button>
+      <button
+        class="absolute p-2 text-black transform -translate-y-1/2 top-1/2 right-2 bg-white rounded-md hover:text-white hover:bg-[#D0A614]"
+        (click)="handleNext()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+

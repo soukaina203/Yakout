@@ -1,7 +1,7 @@
 <div class='w-full p-6 bg-[#16005A] text-white flex justify-center items-center'>
     <div class='container grid items-center justify-center w-auto grid-cols-1 p-10 ml-auto mr-auto duration-500 transform place-content-center sm:grid-cols-2 md:p-8 lg:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-4'>
-      <div *ngFor="let e of Props" class='flex h-full justify-center max-w-sm gap-[1.7rem] p-3 pb-2 mx-auto my-auto duration-300 cursor-pointer'>
-        <i [class]="e.icon" style="font-size: 55px;"></i>
+      <div *ngFor="let e of Props" class='flex items-center h-full justify-center max-w-sm gap-[1.7rem] p-3 pb-2 mx-auto my-auto duration-300 cursor-pointer'>
+        <i [class]="e.icon" class="text-[2.8rem] md:text-[3.5rem]"></i>
         <div class='flex flex-col w-[12rem]'>
           <h1 class='text-6xl font-bold'>{{e.years}}</h1>
           <h3 class='text-[19px] font-semibold'>{{e.title}}</h3>

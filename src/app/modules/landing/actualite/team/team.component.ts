@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-team',
@@ -10,35 +11,53 @@ import { CommonModule } from '@angular/common';
 })
 export class TeamComponent {
     currentIndex = 0;
-    isLargeScreen = window.innerWidth >= 1024;
+    isLargeScreen = false;
+
     slides = [
-      { image: 'male-01.jpg', name: 'Laurent Carponsin', description: 'Expert-Comptable et Commissaire aux comptes', post:'Associé CF' },
-      { image: 'male-10.jpg', name: 'Laurent Carponsin', description: 'Expert-Comptable et Commissaire aux comptes', post:'Associé CF' },
-      { image: 'male-14.jpg', name: 'Laurent Carponsin', description: 'Expert-Comptable et Commissaire aux comptes', post:'Associé CF' },
-      { image: 'male-15.jpg', name: 'Laurent Carponsin', description: 'Expert-Comptable et Commissaire aux comptes', post:'Associé CF' },
-      { image: 'male-16.jpg', name: 'Laurent Carponsin', description: 'Expert-Comptable et Commissaire aux comptes', post:'Associé CF' },
+      {
+        name: 'Laurent Carponsin',
+        content: 'Expert-Comptable et Commissaire aux comptes',
+        image: 'assets/images/avatars/path_to_image1.jpg',
+      },
+      {
+        name: 'Tristan de La Rivière',
+        content: 'Avocat à la cour',
+        image: 'assets/images/avatars/path_to_image2.jpg',
+      },
+      {
+        name: 'Gregory Dupont',
+        content: 'Expert-Comptable et Commissaire aux Comptes',
+        image: 'assets/images/avatars/path_to_image3.jpg',
+      },
+      {
+        name: 'Frédéric Huguet',
+        content: 'Expert-Comptable',
+        image: 'assets/images/avatars/path_to_image4.jpg',
+      }
     ];
 
-
-    ngOnInit(): void {
-
+    constructor() {
+      this.updateScreenSize();
     }
 
-    ngOnDestroy(): void {
-      window.removeEventListener('resize', this.handleResize);
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.updateScreenSize();
     }
 
-    handleResize = () => {
-      this.isLargeScreen = window.innerWidth >= 1024;
-    };
-
-    handleNext(): void {
-      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    updateScreenSize() {
+      this.isLargeScreen = window.innerWidth >= 1024; // Tailwind's lg breakpoint
     }
 
-    handlePrev(): void {
-      this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+    handlePrev() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      }
     }
 
-
+    handleNext() {
+      if (this.currentIndex < this.slides.length - (this.isLargeScreen ? 3 : 1)) {
+        this.currentIndex++;
+      }
+    }
 }
