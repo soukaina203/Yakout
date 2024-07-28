@@ -3,13 +3,9 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "fuse": {
+        "yakout": {
             "projectType": "application",
-            "schematics": {
-                "@schematics/angular:component": {
-                    "style": "scss"
-                }
-            },
+            "schematics": {},
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
@@ -17,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/fuse",
+                        "outputPath": "dist/yakout",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -125,6 +121,9 @@
                         ],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }
